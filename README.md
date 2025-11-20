@@ -6,39 +6,41 @@ This repository provides Code for statistical modeling and mediation analysis th
 
 ## Code
 - **0_Count_LMM_cog.m**  
-  Linear modeling assessing parental-age effects on children’s behavioral/cognitive summary scores.
+  Linear modeling assessing parental-age effects on children’s cognitive function, psychiatric symptoms and behavioral problems.
 
 - **1_count_LMM_brain.m**  
   Mixed-effect modeling evaluating parental-age effects on morphometric similarity network measures with site as random intercept.
 
 - **2_Count_peaks.m**  
-  Estimation of quadratic turning points (peak/valley) in MSN–parental age associations, with confidence interval calculation.
+  Estimation of quadratic turning points (peak/valley) in the associations between parental age and MSN/behavioral outcomes, with confidence interval calculation.
 
 - **3_mediation.m**  
-  Mediation analysis testing whether MSN measures mediate the relationship between parental age and cognition.
+  Mediation analysis testing whether cortical connectome architecture mediate the relationship between parental age and children’s cognitive, psychiatric, and
+  behavioral outcomes.
 
 - **mixed_model_brain.m**  
   Supporting functions for mixed-effect models on brain MSN metrics.
 
-- **mixed_model_cog.m**
-  Supporting regression functions for cognitive score modeling.
-
+- **mixed_model_cog.m**  
+  Supporting regression functions for cognitive, psychiatric, and behavioral scores modeling.
+  
     
-## Results
-- **LMM_module_f.mat** 
- Summary statistics of significant parternal age effects on node similarity strength/system-level connectome matrix obtained from mixed-effect modeling.
+### Results
 
-- **Mediation_beh_f_module.mat** 
- Bootstrapped mediation results linking paternal age → MSN → cognition, including FDR-corrected significance indicators.
+- **LMM_module_f.mat**  
+  Summary statistics of significant paternal-age effects on node similarity strength/system-level connectome matrix obtained from mixed-effect modeling.
 
-- **peaks_f_module.mat** 
- Estimated turning point (peak age) and confidence interval for parternal-age effects on system-level connectome matrix.
+- **Mediation_beh_f_module.mat**  
+  Bootstrapped mediation results linking parternal age → MSN → cognitive/psychiatric/behavioral outcomes, including FDR-corrected significance indicators.
+
+- **peaks_f_module.mat**  
+  Estimated turning point (peak age) and confidence interval for paternal-age effects on system-level connectome matrix.
 
 
 ## Analysis Overview
 
-1️⃣ Linear Modeling ofBehavior Scores
-Evaluate parental-age–related changes in children's behavioral/cognitive scores.
+1️⃣ Linear Modeling of Behavior Scores
+Evaluate parental-age–related changes in children's cognitive/psychiatric/behavioral outcomes.
 
 2️⃣ Mixed-Effect Modeling for Brain Connectome
 Assess parental age effects on morphometric similarity network measures
@@ -50,7 +52,7 @@ Identify the age at which parental age effect reaches a peak/valley
 based on quadratic model fitting with confidence interval estimation.
 
 4️⃣ Mediation Analysis
-Test whether brain morphometric connectivity mediates
+Test whether cortical connectome architecture mediates
 the link between parental age and cognition
 (bootstrap mediation, 10,000 samples + FDR correction)
 
